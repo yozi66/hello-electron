@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Electron Main",
+            "program": "${workspaceFolder}/main.js",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        { // see https://stackoverflow.com/questions/34835082/how-to-debug-using-npm-run-scripts-from-vscode
             "type": "node",
             "request": "launch",
             "name": "npm start",
